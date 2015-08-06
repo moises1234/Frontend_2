@@ -1,0 +1,302 @@
+/*---Fuentes---*/
+@font-face 
+	font-family: 'iconos'
+	src:url('../fonts/icomoon.eot?pg6p92')
+	src:url('../fonts/icomoon.eot?#iefixpg6p92') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?pg6p92') format('truetype'),
+		url('../fonts/icomoon.woff?pg6p92') format('woff'),
+		url('../fonts/icomoon.svg?pg6p92#icomoon') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+
+/*---Variables---*/
+azul = #22BCE0
+gris_oscuro = #444
+gris_texto = #7A7A7A
+naranja = #DD4F24
+amarillo = #DBB811
+
+
+/*---Cuerpo de la pagina---*/
+a
+	color naranja
+
+body
+	background #E8E8E8
+	color gris_oscuro
+	font-family Arial
+	
+
+/*---Estilos de Header---*/
+.Header
+	background gris_oscuro
+	box-shadow 0 5px 0 rgba(0,0,0,0.2)
+	color white
+	padding .5em
+	overflow hidden
+	position relative
+	z-index 1
+	
+	.Logo
+		border-right 1px solid azul
+		float left
+		width 4em
+
+		.imagen
+			width 3.5em
+			
+	.Titular
+		margin 0 80px 0 70px
+		
+		.titulo
+			font-size 1.2em
+			font-weight normal
+			margin 0
+			padding 0
+			
+		.div2
+			
+			.filtro
+				color azul
+				font-weight bold
+				font-style italic
+				font-size 14px
+				text-decoration none
+				
+			.publicar
+				background naranja
+				color white
+				float right
+				font-weight bold
+				font-style italic
+				margin -.3em 0 0 0
+				padding .2em .5em
+				text-decoration none
+				text-shadow 1px 1px 0px black
+				
+				&:before
+					display inline-block
+					font-family "iconos"
+					content "\e603"
+					margin 0 .1em 0 0
+			
+	.Usuario
+		position absolute
+		top .5em
+		right .5em
+		
+		.content-avatar 
+			margin 0 1em 0 0
+			position relative
+			z-index 2
+			
+			.avatar
+				border-radius 50%
+				width 3.5em
+				
+		.flecha
+			background naranja
+			color white
+			display block
+			padding .2em
+			position absolute
+			right 0
+			top 1em
+			text-align right
+			text-decoration none
+			width 50%
+			
+			&:before
+				content "\e600"
+				display inline-block
+				font-family "iconos"
+				margin 0 0 0 1.4em
+				text-shadow 1px 1px 0px black
+			
+
+/*---Estilos de Navegacion---*/
+.Navegacion
+	background azul
+	border-left 15px solid white
+	position relative
+	
+	&:before
+		border-bottom 20px solid transparent
+		border-left 7px solid white
+		border-top 20px solid transparent
+		content ""
+		left 0
+		position absolute
+		top 0
+	
+	.Lista
+		height 40px
+		line-height 40px
+		margin 0
+		padding 0
+		overflow-x auto
+		white-space nowrap
+		
+		.item
+			display inline-block
+			
+			a
+				color white
+				display inline-block
+				margin 0 .3em
+				padding 0 .3em
+				text-decoration none
+				
+/*---Estilos de Secciones---*/
+.Seccion
+	padding .5em
+	
+	.item
+		background white
+		border-radius 0 0 0.5em 0.5em
+		color gris_texto
+		box-shadow 2px 2px 10px rgba(black, .5)
+		margin-bottom 2%
+		
+		.descripcion
+			
+			.content-imagen 
+				float left
+
+				.imagen
+					height 160px
+					vertical-align top
+					width 120px
+					
+			.detalles
+				height 160px
+				margin-left 130px
+
+				.titulo
+					color gris_oscuro
+					font-size 18px
+					font-style italic
+					margin 0
+					padding .5em .5em 0 0
+					
+				.autor
+					margin .5em 0 2em 0
+					
+				.tag
+					background azul
+					border-radius .5em
+					color white
+					padding .2em .5em
+					text-decoration none
+					
+				.fecha
+					float right
+					margin 0 1em 0 0
+			
+		.acciones
+			border-top 3px solid azul
+			padding .5em
+			overflow hidden
+			
+			.votos
+				float left
+				
+				.up
+				.down
+					text-decoration none
+				
+				.down
+					color red
+					
+					&:before
+						font-family "iconos"
+						font-size 1.2em
+						content "\e601"
+					
+				.up
+					color green
+					
+					&:before
+						font-family "iconos"
+						font-size 1.2em
+						content "\e602"
+						
+				.total
+					margin .3em
+
+			.datos
+				float right
+				
+				.comentarios
+					background gris_texto
+					border-radius 3px
+					color white
+					margin 0 1em 0 0 
+					padding 2px 5px
+					text-decoration none
+					
+				.estrella
+					color amarillo
+					text-decoration none
+					
+					&:before
+						font-family "iconos"
+						font-size 1.2em
+						content "\e604"
+
+
+/*---Estilos de Footer---*/
+.Footer
+	background naranja
+	color rgba(white, .5)
+	text-align center
+	padding 1em 0
+	width 100%
+	
+	.content
+		font-size 14px
+		font-weight normal
+		
+		strong
+			display block
+
+	.mejor
+		
+		&:before
+			content " - "
+		
+		&:after
+			content " - "
+			
+
+
+/*---Resposive Designe---*/
+@media screen and (min-width: 768px)
+	
+	.Header
+		
+		.Titular
+			
+			.div2
+				
+				.publicar
+					padding-left 3em
+					position relative
+					
+					&:before
+						font-size 2.5em
+						left 0
+						position absolute
+						top -10px
+
+
+	.Seccion
+		
+		.item
+			display inline-block
+			width 46%
+			
+			&:nth-child(odd)
+				margin-right 2%
